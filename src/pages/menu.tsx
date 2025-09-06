@@ -26,6 +26,8 @@ interface MenuData {
     }[];
   };
 }
+
+
 const menuData: MenuData = {
   Antipasti: {
     icon: <Utensils className="h-5 w-5 text-primary inline-block mr-1" />,
