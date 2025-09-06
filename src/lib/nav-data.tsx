@@ -91,7 +91,7 @@ export const navItems =[
 export const footerNavItems =[
   { title: "Home", url: "/" , icon: <Home />},
   { title: "Menu", url: "/menu" , icon: <Menu/>},
-    { title: "Cart", url: "/cart" , icon: <ShoppingCart/>},
+    { title: "Carrello", url: "/cart" , icon: <ShoppingCart/>},
 
   { title: "Settings", url: "/settings" , icon: <Settings/>},
   

@@ -26,7 +26,7 @@ const Category = ({
 }) => (
   <TabsContent value={category.name}>
     <div className="  ">
-      <h2 className=" text-3xl  my-4    font-extralight text-secondary-foreground flex items-center justify-between">
+      <h2 className=" text-3xl font-great-vibes  my-4    font-extralight text-secondary-foreground flex items-center justify-between">
         {category.name}{" "}
         <Button className=" relative" size={"icon"} variant={"outline"}>
           {category.icon}
@@ -35,16 +35,16 @@ const Category = ({
       <div className=" grid grid-cols-2 sm:grid-cols-4 gap-4">
         {category.items.map((item) => (
           <Sheet>
-            <SheetTrigger className="border text-start  backdrop-blur  backdrop-brightness-75    text-card-foreground rounded-2xl mb-2 overflow-hidden     ">
+            <SheetTrigger className="border group shadow shadow-amber-400/0 transition active:shadow-primary/60 text-start  backdrop-blur  backdrop-brightness-75    text-card-foreground rounded-2xl mb-2 overflow-hidden     ">
               <img src={item.thumbnail} className=" h-32 mx-auto object-cover" />
            
 
-              <div className=" min-h-28 p-3 border-t bg-gradient-to-r via-primary/10 ">
-                <h3 className="   line-clamp-1 font-semibold text-lg">
+              <div className=" min-h-28 p-3 border-t bg-gradient-to-r from-card to-card via-primary/10 ">
+                <h3 className=" group-hover:text-primary transition font-great-vibes   line-clamp-1 font-semibold text-lg">
                   {item.name}
                 </h3>
 
-                <p className=" h-10 text-xs font-extralight text-muted-foreground">
+                <p className="  font-cinzel  h-10 text-xs font-extralight text-muted-foreground">
                   {item.description}
                 </p>
                 <span className="text-secondary-foreground font-bold">
@@ -89,7 +89,7 @@ export default function Menu() {
           ))}
         </TabsList>
       </header>
-      <main className=" bg-background/80 p-8 flex-1  relative   overflow-x-hidden overflow-y-auto">
+      <main className=" bg-background/80 p-4 flex-1  relative   overflow-x-hidden overflow-y-auto">
         <ParallaxBg />
         <div>
           {Object.entries(menuData).map(([categoryName, data]) => (
