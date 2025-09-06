@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="text-center max-w-3xl px-4  flex flex-col items-center pt-10 "
+      className="text-center mx-auto max-w-3xl px-4  flex flex-col items-center pt-10 "
     >
       {/* Titolo piccolo con icona */}
       <h1 className="text-2xl   font-great-vibes flex items-center gap-2 justify-center">

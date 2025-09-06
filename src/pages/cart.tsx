@@ -1,20 +1,21 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { menuData } from "@/lib/menu";
+import { getCategory } from "@/lib/menu";
+import type { ProductReference } from "@/lib/types";
 import { ChevronLeft, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+ 
 
 const Order = ({
-  productRef: { category, productName },
+  productRef: { categoryName, productName },
 }: {
-  productRef: {
-    category: string;
-    productName: string;
-  };
+  productRef: ProductReference
 }) => {
-  const product = menuData[category].items.find((i) => i.name === productName);
 
+  const category = getCategory(categoryName)
+  const product = category?.items.find(p=>p.name === productName)
+  console.log({category, product})
   return (
     product && (
       <div className=" rounded-3xl   p-4 relative">
@@ -22,7 +23,7 @@ const Order = ({
           {product.price}
         </Badge>
         <img className=" h-44 mx-auto object-cover" src={product.thumbnail} />
-        <h3 className=" text-primary font-cinzel">{category}</h3>
+        <h3 className=" text-primary font-cinzel">{category?.name}</h3>
         <h2 className=" text-xl font-great-vibes font-bold">{product.name}</h2>
 
         <hr className=" my-2" />
@@ -54,19 +55,19 @@ function Cart() {
           <CardContent>
             <Order
               productRef={{
-                category: "Antipasti",
+                categoryName: "Antipasti",
                 productName: "Bruschetta Siciliana",
               }}
             />
             <Order
               productRef={{
-                category: "Primi",
+                categoryName: "Primi",
                 productName: "Pasta alla Norma",
               }}
             />
             <Order
               productRef={{
-                category: "Primi",
+                categoryName: "Primi",
                 productName: "Gnocchi al Pesto",
               }}
             />

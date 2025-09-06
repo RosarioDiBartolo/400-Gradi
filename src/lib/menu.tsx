@@ -6,19 +6,20 @@ import asparagusSaladThumbnail from "@/assets/asparagus.png";
 import coffeThumbnail from "@/assets/coffe.png";
 import burgerThumbnail from "@/assets/burger.png";
 import pizzaThumbnail from "@/assets/pizza.png";
-export interface MenuData {
-  [key: string]: {
-    icon: JSX.Element;
-    items: {
+ 
+export type Product  = {
       thumbnail: string;
       name: string;
       description: string;
       price: string;
-    }[];
-  };
-}
-
+    }
+export interface Category {
+    name: string;
+    icon: JSX.Element;
+    items: Product []
  
+}
+  
 
 const thumbnails = [
   saladThumbnail,
@@ -32,8 +33,15 @@ function getRandomThumbnail() {
   return thumbnails[Math.floor(Math.random() * thumbnails.length)];
 }
 
-export const menuData: MenuData = {
-  Antipasti: {
+
+export const getCategory = ( name: string)=>(
+  menuData.find( c => c.name.toLowerCase() === name.toLowerCase())
+)
+
+
+export const menuData: Category[] = [
+    {
+    name: "Antipasti",
     icon: <Utensils className="h-5 w-5 text-primary inline-block mr-1" />,
     items: [
       {
@@ -67,8 +75,9 @@ export const menuData: MenuData = {
         thumbnail: getRandomThumbnail(),
       },
     ],
-  },
-  Primi: {
+  }, {
+          name: "Primi",
+
     icon: <ChefHat className="h-5 w-5 text-primary inline-block mr-1" />,
     items: [
       {
@@ -103,7 +112,9 @@ export const menuData: MenuData = {
       },
     ],
   },
-  Secondi: {
+   {
+          name: "Secondi",
+
     icon: <Drumstick className="h-5 w-5 text-primary inline-block mr-1" />,
     items: [
       {
@@ -138,7 +149,8 @@ export const menuData: MenuData = {
       },
     ],
   },
-  Dolci: {
+   {
+    name: "Dolci",
     icon: <Star className="h-5 w-5 text-yellow-400 inline-block mr-1" />,
     items: [
       {
@@ -173,4 +185,4 @@ export const menuData: MenuData = {
       },
     ],
   },
-};
+];

@@ -11,6 +11,7 @@ import Cart from './pages/cart';
 
 import "./fonts"
 import Settings from "./pages/settings";
+import Product from "./pages/product";
 
 
 // Define routes
@@ -27,6 +28,8 @@ const router = createBrowserRouter([
       { path: "menu", element: <Menu /> },
       { path: "cart", element: <Cart /> },
       { path: "settings", element: <Settings /> },
+            { path: "products/:category/:name", element: <Product /> }, // <-- param route
+
     ],
   },
 ]);
