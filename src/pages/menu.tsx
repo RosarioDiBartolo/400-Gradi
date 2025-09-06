@@ -1,9 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { Utensils, Drumstick, ChefHat, Star, ShoppingCart } from "lucide-react";
-import type { JSX } from "react";
+import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import saladThumbnail from "@/assets/salad.png";
 import ParallaxBg from "@/components/parallax-bg";
 import {
   SheetTrigger,
@@ -15,141 +13,10 @@ import {
 } from "@/components/ui/sheet";
 
 import { Play } from "lucide-react"; 
+import { menuData, type MenuData } from "@/lib/menu";
  
-interface MenuData {
-  [key: string]: {
-    icon: JSX.Element;
-    items: {
-      name: string;
-      description: string;
-      price: string;
-    }[];
-  };
-}
-
-
-const menuData: MenuData = {
-  Antipasti: {
-    icon: <Utensils className="h-5 w-5 text-primary inline-block mr-1" />,
-    items: [
-      {
-        name: "Bruschetta Siciliana",
-        description: "Pomodoro, basilico e olio EVO",
-        price: "5€",
-      },
-      {
-        name: "Arancini",
-        description: "Ripieno di ragù e piselli",
-        price: "3€",
-      },
-      {
-        name: "Caprese",
-        description: "Mozzarella di bufala, pomodoro e basilico",
-        price: "6€",
-      },
-      {
-        name: "Carpaccio di Manzo",
-        description: "Manzo crudo con rucola e scaglie di parmigiano",
-        price: "8€",
-      },
-      {
-        name: "Olive All’Ascolana",
-        description: "Olive ripiene fritte",
-        price: "4€",
-      },
-    ],
-  },
-  Primi: {
-    icon: <ChefHat className="h-5 w-5 text-primary inline-block mr-1" />,
-    items: [
-      {
-        name: "Pasta alla Norma",
-        description: "Melanzane, ricotta salata e pomodoro",
-        price: "8€",
-      },
-      {
-        name: "Gnocchi al Pesto",
-        description: "Gnocchi fatti in casa con pesto fresco",
-        price: "7€",
-      },
-      {
-        name: "Spaghetti alle Vongole",
-        description: "Con vongole fresche e prezzemolo",
-        price: "10€",
-      },
-      {
-        name: "Lasagne alla Bolognese",
-        description: "Sfoglia fresca, ragù e besciamella",
-        price: "9€",
-      },
-      {
-        name: "Risotto ai Funghi Porcini",
-        description: "Riso cremoso con porcini freschi",
-        price: "11€",
-      },
-    ],
-  },
-  Secondi: {
-    icon: <Drumstick className="h-5 w-5 text-primary inline-block mr-1" />,
-    items: [
-      {
-        name: "Pesce Spada alla Griglia",
-        description: "Servito con contorno di stagione",
-        price: "12€",
-      },
-      {
-        name: "Pollo alla Cacciatora",
-        description: "Cotto lentamente con pomodoro e olive",
-        price: "10€",
-      },
-      {
-        name: "Scaloppine al Limone",
-        description: "Vitello tenero al profumo di limone",
-        price: "11€",
-      },
-      {
-        name: "Involtini di Melanzane",
-        description: "Ripieni di formaggio e prosciutto",
-        price: "9€",
-      },
-      {
-        name: "Calamari Fritti",
-        description: "Con salsa tartara fatta in casa",
-        price: "13€",
-      },
-    ],
-  },
-  Dolci: {
-    icon: <Star className="h-5 w-5 text-yellow-400 inline-block mr-1" />,
-    items: [
-      {
-        name: "Cannolo Siciliano",
-        description: "Crema di ricotta fresca con granella",
-        price: "4€",
-      },
-      {
-        name: "Gelato Artigianale",
-        description: "Varie gusti di stagione",
-        price: "3€",
-      },
-      {
-        name: "Tiramisù",
-        description: "Classico con savoiardi e mascarpone",
-        price: "5€",
-      },
-      {
-        name: "Cassata Siciliana",
-        description: "Pan di spagna, ricotta e frutta candita",
-        price: "6€",
-      },
-      {
-        name: "Panna Cotta",
-        description: "Con coulis di frutti di bosco",
-        price: "4€",
-      },
-    ],
-  },
-};
+ 
+ 
 
 
 const Category = ({
@@ -169,7 +36,7 @@ const Category = ({
         {category.items.map((item) => (
           <Sheet>
             <SheetTrigger className="border text-start  backdrop-blur  backdrop-brightness-75    text-card-foreground rounded-2xl mb-2 overflow-hidden     ">
-              <img src={saladThumbnail} className="  " />
+              <img src={item.thumbnail} className=" h-32 mx-auto object-cover" />
            
 
               <div className=" min-h-28 p-3 border-t bg-gradient-to-r via-primary/10 ">
@@ -192,7 +59,7 @@ const Category = ({
               </SheetHeader>
               <div className=" p-5 space-y-10">
                 <img
-                  src={saladThumbnail}
+                  src={item.thumbnail}
                   className="  rounded-md  max-w-xs mx-auto "
                 />
                 <Button className=" w-full">
