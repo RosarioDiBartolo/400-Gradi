@@ -16,19 +16,21 @@ import Settings from "./pages/settings";
 // Define routes
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Layout />,
+    path: "/",
+    element: <Home />, // no Layout for home
+  },
+  {
+    path: "/",
+    element: <Layout />, // wrap all others
     children: [
-      { index: true, element: <Home /> },   // default route
-      { path: 'about', element: <About /> }, // /about
-      { path: "menu", element: <Menu />},
-      { path: "cart", element: <Cart />},
-            { path: "settings", element: <Settings />}
-
-
+      { path: "about", element: <About /> },
+      { path: "menu", element: <Menu /> },
+      { path: "cart", element: <Cart /> },
+      { path: "settings", element: <Settings /> },
     ],
   },
 ]);
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
