@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getCategory } from "@/lib/menu";
-import { ChevronDown, ChevronLeft, ShoppingCart, Star } from "lucide-react";
+import {   ChevronLeft, ShoppingCart, Star } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { Link, useParams } from "react-router-dom";
 

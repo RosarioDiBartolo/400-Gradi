@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react'
-import React from 'react'
+ 
 
 function DynamicBorder() {
 
