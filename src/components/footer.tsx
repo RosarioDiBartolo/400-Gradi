@@ -12,7 +12,7 @@ function Footer() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 120 }}
     >
-      <Card className="p-4 bg-background text-background rounded-b-none  ">
+      <Card className="p-4 bg-background text-background border-b-0 border-x-0 rounded-none  ">
         <CardContent>
           <motion.nav layout>
             <motion.ul layout className="flex justify-between">

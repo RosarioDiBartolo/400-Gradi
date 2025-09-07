@@ -1,3 +1,4 @@
+import DynamicBorder from "@/components/dynamic-border";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,7 +37,9 @@ function Cart() {
 
   return (
     <>
-      <header className=" bg-background sticky top-0 backdrop-blur-md z-50 text-foreground p-5 flex items-center gap-5">
+      <header className=" bg-background sticky top-0 backdrop-blur-md z-50 text-foreground   ">
+        <div className="flex items-center gap-5 p-5">
+ 
         <ChevronLeft
           onClick={() => navigate(-1)}
           size={28}
@@ -46,6 +49,9 @@ function Cart() {
         <h1 className=" text-2xl flex items-center gap-3">
           <ShoppingCart /> Carrello{" "}
         </h1>
+        
+        </div>
+        <DynamicBorder />
       </header>
       <main className=" flex-1 bg-background   p-5">
         <Card className="text-center rounded-3xl border-0">
