@@ -7,12 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 function Footer() {
   return (
     <motion.footer
-      className=" sticky   bottom-[1px]"
+      className=" sticky   bottom-0  "
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 120 }}
     >
-      <Card className="p-4 bg-background text-background border-b-0 border-x-0 rounded-none  ">
+      <Card className="p-4 pb-10 bg-background text-background border-b-0 border-x-0 rounded-none  ">
         <CardContent>
           <motion.nav layout>
             <motion.ul layout className="flex justify-between">
