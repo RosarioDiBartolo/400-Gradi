@@ -15,7 +15,10 @@ function Product() {
   // Motion transforms
   const scale = useTransform(scrollY, [-300, 300], [1.3, 0.8]);
   const brightness = useTransform(scrollY, [-300, 300], [1.5, 0.2]);
+    const contentBrightness = useTransform(scrollY, [0, 100], [ 0.5,1]);
+
   const filter = useTransform(brightness, (b) => `brightness(${b})`);
+  const contentFilter = useTransform(contentBrightness, (b) => `brightness(${b})`);
 
   if (!categoryName || !productName)
     return <p className="text-center mt-10">Prodotto non trovato.</p>;
@@ -36,13 +39,15 @@ function Product() {
           src={product.thumbnail}
           alt={product.name}
           style={{ scale, filter }}
-          className="w-full h-[40vh] object-cover"
+          className="w-full h-[40vh] object-cover object-top"
           loading="lazy"
         />
       </div>
 
       {/* Product details */}
-      <div className="bg-secondary/90 text-center p-8 md:p-12 rounded-t-4xl relative">
+      <motion.div 
+      style={{filter: contentFilter}}
+      className="bg-secondary text-center p-8 md:p-12 rounded-t-4xl relative">
         <header className="  space-y-2">
           <Button variant={"link"} asChild>
             <Link className=" !block" to={"/menu"}>
@@ -100,7 +105,7 @@ function Product() {
             </Button>
           </div>
         </section>
-      </div>
+      </motion.div>
     </main>
   );
 }
