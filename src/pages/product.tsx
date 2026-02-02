@@ -1,9 +1,12 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getCategory } from "@/lib/menu";
-import {   ChevronLeft, ShoppingCart, Star } from "lucide-react";
+import { ChevronLeft, ShoppingCart, Star } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 function Product() {
   const { category: categoryName, name: productName } = useParams<{
@@ -11,8 +14,6 @@ function Product() {
     name: string;
   }>();
 
-  const [searchParams, setSearchParams] = useSearchParams();
-  const table = Number(searchParams.get("table"))
   
 
   const { scrollY } = useScroll();
@@ -55,7 +56,7 @@ function Product() {
       className="bg-secondary text-center p-8 md:p-12 rounded-t-4xl relative">
         <header className="  space-y-2">
           <Button variant={"link"} asChild>
-            <Link className=" !block" to={"/menu"}>
+            <Link className=" !block" href="/menu">
               <ChevronLeft className=" size-6" />
             </Link>
           </Button>
@@ -101,10 +102,10 @@ function Product() {
               Aggiungi recensione <Star className="fill-primary text-primary" />
             </Button>
             <Button
-               asChild
+              asChild
               className="w-full flex items-center justify-center gap-2"
             >
-              <Link to="/cart">
+              <Link href="/cart">
                 Aggiungi al carrello <ShoppingCart />
               </Link>
             </Button>

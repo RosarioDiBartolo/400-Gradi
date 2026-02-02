@@ -39,6 +39,18 @@ export default tseslint.config([
 ])
 ```
 
+## Menu App (Next.js)
+
+Environment variables (Sanity):
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- `NEXT_PUBLIC_SANITY_DATASET`
+- `NEXT_PUBLIC_SANITY_API_VERSION` (optional)
+- `SANITY_READ_TOKEN` (optional, for private datasets)
+
+Run:
+- `npm install`
+- `npm run dev`
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js

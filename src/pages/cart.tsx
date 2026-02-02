@@ -1,3 +1,5 @@
+"use client";
+
 import DynamicBorder from "@/components/dynamic-border";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -5,7 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { getCategory } from "@/lib/menu";
 import type { ProductReference } from "@/lib/types";
 import { ChevronLeft, ShoppingCart } from "lucide-react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useRouter, useSearchParams } from "next/navigation";
  
 
 const Order = ({
@@ -33,8 +35,8 @@ const Order = ({
   );
 };
 function Cart() {
-  const navigate = useNavigate();
-  const [searchParams,  ] = useSearchParams();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const table = Number(searchParams.get("table"))
   
 
@@ -44,7 +46,7 @@ function Cart() {
         <div className="flex items-center gap-5 p-5">
  
         <ChevronLeft
-          onClick={() => navigate(-1)}
+          onClick={() => router.back()}
           size={28}
           strokeWidth={1.25}
           absoluteStrokeWidth

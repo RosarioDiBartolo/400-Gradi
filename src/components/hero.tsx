@@ -1,6 +1,6 @@
- import { Button } from "./ui/button";
+import { Button } from "./ui/button";
 import { Pizza, Star, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -28,15 +28,15 @@ function Hero() {
       {/* Sottotitolo */}
       <p className="font-sans font-light text-muted-foreground text-xl mb-6 max-w-2xl">
         <Star className="inline-block h-5 w-5 text-yellow-500 mr-1" />
-        Utilizziamo solo ingredienti di qualità a cinque stelle per il nostro
-        menù. Vieni a gustare la ricchezza in ogni piatto che serviamo.
+        Utilizziamo solo ingredienti di qualitÃ  a cinque stelle per il nostro
+        menÃ¹. Vieni a gustare la ricchezza in ogni piatto che serviamo.
       </p>
 
       {/* Call to action */}
       <Button asChild size="xl" className="font-serif flex items-center gap-2">
-        <Link to={"/menu"}> 
-        Vai al menù
-        <MapPin className="h-5 w-5" />
+        <Link href="/menu">
+          Vai al menÃ¹
+          <MapPin className="h-5 w-5" />
         </Link>
       </Button>
     </section>

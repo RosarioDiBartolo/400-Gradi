@@ -1,3 +1,5 @@
+"use client";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
  
 import { Button } from "@/components/ui/button";
@@ -5,7 +7,7 @@ import ParallaxBg from "@/components/parallax-bg";
  
 import { Play } from "lucide-react"; 
 import { menuData, type Category } from "@/lib/menu";
-import { Link } from "react-router-dom";
+import Link from "next/link";
  
  
  
@@ -26,7 +28,11 @@ const Category = ({
       </h2>
       <div className=" grid grid-cols-2 sm:grid-cols-4 gap-4">
         {category.items.map((item) => (
-             <Link to={`/products/${category.name}/${item.name}`} className="border group shadow shadow-amber-400/0 transition active:shadow-primary/60 text-start  backdrop-blur  backdrop-brightness-75    text-card-foreground rounded-2xl mb-2 overflow-hidden     ">
+             <Link
+              key={item.name}
+              href={`/products/${encodeURIComponent(category.name)}/${encodeURIComponent(item.name)}`}
+              className="border group shadow shadow-amber-400/0 transition active:shadow-primary/60 text-start  backdrop-blur  backdrop-brightness-75    text-card-foreground rounded-2xl mb-2 overflow-hidden     "
+            >
               <img src={item.thumbnail} className=" h-32 mx-auto object-cover" />
            
 

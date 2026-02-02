@@ -1,5 +1,6 @@
 import { ChefHat, Drumstick, Star, Utensils } from "lucide-react";
 import type { JSX } from "react";
+import type { StaticImageData } from "next/image";
 
 import saladThumbnail from "@/assets/salad.png";
 import asparagusSaladThumbnail from "@/assets/asparagus.png";
@@ -22,12 +23,17 @@ export interface Category {
 }
   
 
+type ThumbnailSource = string | StaticImageData;
+
+const resolveThumbnail = (thumbnail: ThumbnailSource) =>
+  typeof thumbnail === "string" ? thumbnail : thumbnail.src;
+
 const thumbnails = [
-  saladThumbnail,
-  asparagusSaladThumbnail,
-  coffeThumbnail,
-  burgerThumbnail,
-  pizzaThumbnail,
+  resolveThumbnail(saladThumbnail),
+  resolveThumbnail(asparagusSaladThumbnail),
+  resolveThumbnail(coffeThumbnail),
+  resolveThumbnail(burgerThumbnail),
+  resolveThumbnail(pizzaThumbnail),
 ];
 
 function getRandomThumbnail() {

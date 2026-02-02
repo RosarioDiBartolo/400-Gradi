@@ -1,10 +1,15 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { footerNavItems } from "@/lib/nav-data";
 import { Button } from "./ui/button";
-import { NavLink } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
 function Footer() {
+  const pathname = usePathname();
+
   return (
     <motion.footer
       className=" sticky   bottom-0  "
@@ -16,25 +21,30 @@ function Footer() {
         <CardContent>
           <motion.nav layout>
             <motion.ul layout className="flex justify-between">
-              {footerNavItems.map((item) => (
-                <NavLink key={item.title} to={item.url}>
-                  {({ isActive }) => (
-                    <motion.div layout>
-                      <Button
-                        size={"lg"}
-                        className="rounded-2xl"
-                        variant={isActive ? "default" : "secondary"}
-                        asChild
+              {footerNavItems.map((item) => {
+                const isActive =
+                  pathname === item.url ||
+                  (item.url !== "/" && pathname.startsWith(`${item.url}/`));
+
+                return (
+                  <motion.li key={item.title} layout className="list-none">
+                    <Button
+                      size={"lg"}
+                      className="rounded-2xl"
+                      variant={isActive ? "default" : "secondary"}
+                      asChild
+                    >
+                      <Link
+                        href={item.url}
+                        className="flex items-center gap-1"
                       >
-                        <motion.li
+                        <motion.span
                           layout
-                          className="flex items-center gap-1"
                           whileTap={{ scale: 0.95 }}
+                          className="flex items-center gap-1"
                         >
                           {item.icon}
-                          <AnimatePresence
-                            mode="popLayout"
-                          >
+                          <AnimatePresence mode="popLayout">
                             {isActive && (
                               <motion.span
                                 layout
@@ -47,12 +57,12 @@ function Footer() {
                               </motion.span>
                             )}
                           </AnimatePresence>
-                        </motion.li>
-                      </Button>
-                    </motion.div>
-                  )}
-                </NavLink>
-              ))}
+                        </motion.span>
+                      </Link>
+                    </Button>
+                  </motion.li>
+                );
+              })}
             </motion.ul>
           </motion.nav>
         </CardContent>
