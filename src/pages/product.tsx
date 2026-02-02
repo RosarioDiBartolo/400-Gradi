@@ -3,13 +3,18 @@ import { Button } from "@/components/ui/button";
 import { getCategory } from "@/lib/menu";
 import {   ChevronLeft, ShoppingCart, Star } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 
 function Product() {
   const { category: categoryName, name: productName } = useParams<{
     category: string;
     name: string;
   }>();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const table = Number(searchParams.get("table"))
+  
+
   const { scrollY } = useScroll();
 
   // Motion transforms
@@ -96,7 +101,7 @@ function Product() {
               Aggiungi recensione <Star className="fill-primary text-primary" />
             </Button>
             <Button
-              asChild
+               asChild
               className="w-full flex items-center justify-center gap-2"
             >
               <Link to="/cart">

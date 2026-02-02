@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { getCategory } from "@/lib/menu";
 import type { ProductReference } from "@/lib/types";
 import { ChevronLeft, ShoppingCart } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
  
 
 const Order = ({
@@ -34,6 +34,9 @@ const Order = ({
 };
 function Cart() {
   const navigate = useNavigate();
+  const [searchParams,  ] = useSearchParams();
+  const table = Number(searchParams.get("table"))
+  
 
   return (
     <>
@@ -80,7 +83,9 @@ function Cart() {
           </CardContent>
 
           <CardFooter>
-            <Button variant={"secondary"} size={"xl"} className=" rounded-full w-full">
+            <Button
+            disabled = {!table}
+            variant={"secondary"} size={"xl"} className=" rounded-full w-full">
               Vai al pagamento <ShoppingCart />
             </Button>
           </CardFooter>
