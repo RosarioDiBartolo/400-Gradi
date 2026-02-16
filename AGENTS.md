@@ -26,6 +26,7 @@
 
 ## Code rules (implicit & explicit)
 - Type safety: TypeScript with strict mode enabled (tsconfig.json); shared menu types in src/types/menu.ts.
+- Typegen: Sanity schemas + GROQ projections should be kept in sync by running `npm run typegen` from /cms when either changes (updates src/types/sanity.types.ts, which is gitignored).
 - Error handling: fetchMenu throws clear errors; pages catch and render minimal error UI.
 - Validation: No runtime validation; only filtering by isActive/isAvailable and sorting by order.
 - Logging: None in the App Router menu flow.
@@ -42,6 +43,7 @@
 - /src/assets -> Legacy images for UI components.
 - /src/fonts.ts -> Font CSS imports used by the layout.
 - /public -> Static assets.
+- /cms -> Sanity Studio, schemas, and typegen config (sanity-typegen.json).
 
 ## Environment
 - Required env vars: NEXT_PUBLIC_SANITY_PROJECT_ID, NEXT_PUBLIC_SANITY_DATASET.
@@ -49,6 +51,9 @@
   1. Create .env with Sanity vars (optional: NEXT_PUBLIC_SANITY_API_VERSION, SANITY_READ_TOKEN).
   2. npm install
   3. npm run dev
+
+## Seeds
+- `cd cms && npm run seed` regenerates NDJSON and imports it into the dataset (defaults to `production` unless env overrides).
 
 ## Definition of Done
 - Build passes
@@ -58,5 +63,6 @@
 
 ## Assumptions
 - Sanity schemas exist for category and item and items reference categories as queried in src/lib/cms/client.ts.
+- Item images (mainImage/gallery) and category image are optional and may be empty in CMS.
 - Legacy components (header/footer/hero and src/components/ui) are not wired into the current menu routes.
 - Deployment target is not defined in this repo.

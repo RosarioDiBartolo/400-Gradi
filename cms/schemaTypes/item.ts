@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity';
+﻿import { defineField, defineType } from 'sanity';
 
 export const variant = defineType({
   name: 'variant',
@@ -36,7 +36,7 @@ export const variant = defineType({
     },
     prepare({ titleIt, titleEn, price }) {
       const title = titleIt || titleEn || 'Unnamed variant';
-      const subtitle = typeof price === 'number' ? `�${price}` : undefined;
+      const subtitle = typeof price === 'number' ? `€${price}` : undefined;
       return { title, subtitle };
     },
   },
@@ -67,6 +67,37 @@ export const item = defineType({
       name: 'basePrice',
       title: 'Base Price',
       type: 'number',
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt Text',
+          type: 'string',
+        }),
+      ],
+    }),
+    defineField({
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: { hotspot: true },
+          fields: [
+            defineField({
+              name: 'alt',
+              title: 'Alt Text',
+              type: 'string',
+            }),
+          ],
+        },
+      ],
     }),
     defineField({
       name: 'variants',

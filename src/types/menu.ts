@@ -1,3 +1,4 @@
+// App-level normalized menu types. Raw Sanity schema + query types live in src/types/sanity.types.ts.
 export type i18nString = {
   it: string;
   en?: string | null;
@@ -6,6 +7,11 @@ export type i18nString = {
 export type i18nText = {
   it: string;
   en?: string | null;
+};
+
+export type MenuImage = {
+  url: string;
+  alt?: string | null;
 };
 
 export type Variant = {
@@ -20,6 +26,8 @@ export type Item = {
   name: i18nString;
   description?: i18nText | null;
   basePrice?: number | null;
+  mainImage?: MenuImage | null;
+  gallery?: MenuImage[] | null;
   variants?: Variant[] | null;
   allergens?: string[] | null;
   tags?: string[] | null;
@@ -30,6 +38,7 @@ export type Item = {
 export type Category = {
   _id: string;
   title: i18nString;
+  image?: MenuImage | null;
   kind: "food" | "drink";
   order: number;
   isActive: boolean;

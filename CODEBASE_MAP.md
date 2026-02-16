@@ -12,9 +12,13 @@
 - /src/types -> TypeScript contracts for menu data.
 - /src/assets -> Legacy image assets.
 - /public -> Static assets (logo/background).
+- /cms -> Sanity Studio + schema + typegen config.
 
 ## Key modules
 - src/lib/cms/client.ts -> Sanity fetchMenu() with normalization, sorting, filtering.
+- src/types/sanity.types.ts -> Generated Sanity schema + GROQ query result types (typegen output).
+- cms/sanity-typegen.json -> Typegen config (schema extract + query scan paths).
+- cms/schema.json -> Generated schema snapshot used by typegen.
 - src/lib/i18n/lang.ts -> language storage helpers + getLocalized fallback.
 - src/components/MenuClient.tsx -> client wrapper that reads lang and renders categories.
 - src/components/CategorySection.tsx -> category title + list of ItemCard.
@@ -26,6 +30,8 @@
 
 ## Data & contracts
 - DTOs location: src/types/menu.ts
+- Generated CMS types: src/types/sanity.types.ts (via Sanity typegen, driven by GROQ projections).
+- Images: items support `mainImage` + `gallery`, categories support `image` (all optional).
 - Validation layer: None (only filtering/sorting in cms client).
 - API boundaries: Server components call fetchMenu() which performs HTTPS GROQ query to Sanity; client components receive data via props.
 
@@ -41,7 +47,7 @@
   - src/app/layout.tsx
 
 ## Notes for AI agents
-- Patterns to follow: fetch data in server pages, pass to MenuClient for language-aware rendering; keep components small; use getLocalized() for i18n fallback to it; sort by order.
+- Patterns to follow: fetch data in server pages, pass to MenuClient for language-aware rendering; keep components small; use getLocalized() for i18n fallback to it; sort by order; keep GROQ projections named (for typegen) and regenerate types when schemas or projections change.
 - Anti-patterns to avoid: adding client state to server pages, bypassing getLocalized(), introducing new deps or advanced features.
 - Legacy note: header/footer/hero and src/components/ui are present but not wired to the current menu routes.
 

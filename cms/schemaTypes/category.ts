@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity';
+﻿import { defineField, defineType } from 'sanity';
 
 export const category = defineType({
   name: 'category',
@@ -18,6 +18,19 @@ export const category = defineType({
         source: (doc) => doc?.title?.it ?? doc?.title?.en,
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt Text',
+          type: 'string',
+        }),
+      ],
     }),
     defineField({
       name: 'kind',

@@ -1,7 +1,17 @@
-import type { Category, Item, Variant } from "@/types/menu";
+import { defineQuery } from "groq";
+
+import type {
+  Category,
+  Item,
+  MenuImage,
+  Variant,
+  i18nString,
+  i18nText,
+} from "@/types/menu";
+import type { MenuByKindQueryResult } from "@/types/sanity.types";
 
 type FetchMenuResponse = {
-  result?: Category[];
+  result?: MenuByKindQueryResult;
 };
 
 const getEnv = () => {
@@ -19,33 +29,90 @@ const getEnv = () => {
   return { projectId, dataset, apiVersion, token };
 };
 
-const sortByOrder = <T extends { order: number }>(a: T, b: T) =>
+const sortByOrder = <T extends { order?: number | null }>(a: T, b: T) =>
   (a.order ?? 0) - (b.order ?? 0);
 
-const normalizeVariants = (variants?: Variant[] | null) =>
-  (variants ?? []).slice().sort(sortByOrder);
+type RawCategory = MenuByKindQueryResult[number];
+type RawItem = RawCategory["items"][number];
+type RawVariant = NonNullable<RawItem["variants"]>[number];
 
-const normalizeItems = (items?: Item[] | null) =>
+type RawI18n = { it?: string | null; en?: string | null } | null | undefined;
+
+const normalizeI18nString = (value: RawI18n): i18nString => ({
+  it: value?.it ?? "",
+  en: value?.en ?? null,
+});
+
+const normalizeI18nText = (value: RawI18n): i18nText => ({
+  it: value?.it ?? "",
+  en: value?.en ?? null,
+});
+
+type RawImage = { url?: string | null; alt?: string | null } | null | undefined;
+
+const normalizeImage = (image: RawImage): MenuImage | null => {
+  if (!image?.url) return null;
+  return {
+    url: image.url,
+    alt: image.alt ?? null,
+  };
+};
+
+const normalizeImages = (images?: RawImage[] | null): MenuImage[] | null => {
+  const normalized = (images ?? [])
+    .map((image) => normalizeImage(image))
+    .filter((image): image is MenuImage => Boolean(image));
+  return normalized.length > 0 ? normalized : null;
+};
+
+const normalizeVariants = (variants?: RawVariant[] | null): Variant[] =>
+  (variants ?? [])
+    .map((variant) => ({
+      label: normalizeI18nString(variant.label),
+      price: variant.price ?? 0,
+      order: variant.order ?? 0,
+      isDefault: variant.isDefault ?? null,
+    }))
+    .slice()
+    .sort(sortByOrder);
+
+const normalizeItems = (items?: RawItem[] | null): Item[] =>
   (items ?? [])
     .filter((item) => item.isAvailable)
     .slice()
     .sort(sortByOrder)
     .map((item) => ({
-      ...item,
+      _id: item._id,
+      name: normalizeI18nString(item.name),
+      description: item.description ? normalizeI18nText(item.description) : null,
+      basePrice: item.basePrice ?? null,
+      mainImage: normalizeImage(item.mainImage),
+      gallery: normalizeImages(item.gallery),
       variants: normalizeVariants(item.variants),
+      allergens: item.allergens ?? null,
+      tags: item.tags ?? null,
+      order: item.order ?? 0,
+      isAvailable: item.isAvailable ?? false,
     }));
 
-const normalizeCategories = (categories?: Category[] | null): Category[] =>
+const normalizeCategories = (
+  categories?: RawCategory[] | null
+): Category[] =>
   (categories ?? [])
     .filter((category) => category.isActive)
     .slice()
     .sort(sortByOrder)
     .map((category) => ({
-      ...category,
+      _id: category._id,
+      title: normalizeI18nString(category.title),
+      image: normalizeImage(category.image),
+      kind: (category.kind ?? "food") as Category["kind"],
+      order: category.order ?? 0,
+      isActive: category.isActive ?? false,
       items: normalizeItems(category.items),
     }));
 
-const buildQuery = () => `
+export const menuByKindQuery = defineQuery(`
 *[_type == "category" && kind == $kind && isActive == true]
   | order(order asc) {
     _id,
@@ -53,6 +120,10 @@ const buildQuery = () => `
     kind,
     order,
     isActive,
+    image {
+      "url": asset->url,
+      alt
+    },
     "items": *[
       _type == "item" &&
       isAvailable == true &&
@@ -62,6 +133,14 @@ const buildQuery = () => `
       name,
       description,
       basePrice,
+      mainImage {
+        "url": asset->url,
+        alt
+      },
+      gallery[] {
+        "url": asset->url,
+        alt
+      },
       variants,
       allergens,
       tags,
@@ -69,13 +148,13 @@ const buildQuery = () => `
       isAvailable
     }
   }
-`;
+`);
 
 export const fetchMenu = async (
   kind: "food" | "drink"
 ): Promise<Category[]> => {
   const { projectId, dataset, apiVersion, token } = getEnv();
-  const query = buildQuery();
+  const query = menuByKindQuery;
   const params = `&$kind=${encodeURIComponent(JSON.stringify(kind))}`;
   const url = `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodeURIComponent(
     query

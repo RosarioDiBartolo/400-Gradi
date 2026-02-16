@@ -25,3 +25,7 @@ dist-ssr
 *.sw?
 
 .env
+
+# Sanity typegen outputs
+cms/schema.json
+src/types/sanity.types.ts

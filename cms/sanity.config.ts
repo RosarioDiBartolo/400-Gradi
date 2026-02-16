@@ -1,5 +1,5 @@
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
+import { structureTool  } from 'sanity/structure';
 
 import { schemaTypes } from './schemaTypes';
 
@@ -30,7 +30,7 @@ export default defineConfig({
   dataset,
   apiVersion,
   plugins: [
-    deskTool({
+    structureTool({
       structure: (S) =>
         S.list()
           .title('Content')

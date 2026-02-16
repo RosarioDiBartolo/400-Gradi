@@ -1,0 +1,3837 @@
+[
+  {
+    "_id": "settings.default",
+    "_type": "settings",
+    "restaurantName": "400 Gradi",
+    "brand": {
+      "primaryColor": "#0B0B0B",
+      "accentColor": "#C9A24D",
+      "currency": "EUR",
+      "languages": [
+        "it",
+        "en"
+      ]
+    }
+  },
+  {
+    "_id": "category.antipasti",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "antipasti"
+    },
+    "title": {
+      "it": "Antipasti",
+      "en": ""
+    },
+    "sortOrder": 0,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.calzoni",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "calzoni"
+    },
+    "title": {
+      "it": "Calzoni",
+      "en": ""
+    },
+    "sortOrder": 1,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.pizze-classiche",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "pizze-classiche"
+    },
+    "title": {
+      "it": "Pizze Classiche",
+      "en": ""
+    },
+    "sortOrder": 2,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.le-nostre-creazioni",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "le-nostre-creazioni"
+    },
+    "title": {
+      "it": "Le Nostre Creazioni",
+      "en": ""
+    },
+    "sortOrder": 3,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.pizze-d-autore",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "pizze-d-autore"
+    },
+    "title": {
+      "it": "Pizze D'Autore",
+      "en": ""
+    },
+    "sortOrder": 4,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.le-nostre-stelle",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "le-nostre-stelle"
+    },
+    "title": {
+      "it": "Le Nostre Stelle",
+      "en": ""
+    },
+    "sortOrder": 5,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.pizzoli",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "pizzoli"
+    },
+    "title": {
+      "it": "Pizzoli",
+      "en": ""
+    },
+    "sortOrder": 6,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.hamburger",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "hamburger"
+    },
+    "title": {
+      "it": "Hamburger",
+      "en": ""
+    },
+    "sortOrder": 7,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.dolci",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "dolci"
+    },
+    "title": {
+      "it": "Dolci",
+      "en": ""
+    },
+    "sortOrder": 8,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.bevande",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "bevande"
+    },
+    "title": {
+      "it": "Bevande",
+      "en": ""
+    },
+    "sortOrder": 9,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.birre-alla-spina",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "birre-alla-spina"
+    },
+    "title": {
+      "it": "Birre alla Spina",
+      "en": ""
+    },
+    "sortOrder": 10,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.birrificio-delletna",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "birrificio-delletna"
+    },
+    "title": {
+      "it": "Birrificio dell'Etna",
+      "en": ""
+    },
+    "sortOrder": 11,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.vini-rossi",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "vini-rossi"
+    },
+    "title": {
+      "it": "Vini Rossi",
+      "en": ""
+    },
+    "sortOrder": 12,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.vini-bianchi",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "vini-bianchi"
+    },
+    "title": {
+      "it": "Vini Bianchi",
+      "en": ""
+    },
+    "sortOrder": 13,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.cocktail",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "cocktail"
+    },
+    "title": {
+      "it": "Cocktail",
+      "en": ""
+    },
+    "sortOrder": 14,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "category.caffe",
+    "_type": "category",
+    "slug": {
+      "_type": "slug",
+      "current": "caffe"
+    },
+    "title": {
+      "it": "Caffè",
+      "en": ""
+    },
+    "sortOrder": 15,
+    "isActive": true,
+    "icon": "",
+    "image": null
+  },
+  {
+    "_id": "menuItem.antipasti.patatine-dippers",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "patatine-dippers"
+    },
+    "title": {
+      "it": "Patatine Dippers*",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.patate-al-forno-con-crema-di-parmigiano-reggiano-e-tartufo-a-fette",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "patate-al-forno-con-crema-di-parmigiano-reggiano-e-tartufo-a-fette"
+    },
+    "title": {
+      "it": "Patate al forno con crema di parmigiano reggiano e tartufo a fette",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.chips-di-patate-fresche-con-fonduta-di-cheddar-e-guanciale-croccante",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "chips-di-patate-fresche-con-fonduta-di-cheddar-e-guanciale-croccante"
+    },
+    "title": {
+      "it": "Chips di patate* fresche con fonduta di cheddar e guanciale croccante",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 9,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.chips-di-patate-fresche-con-pulled-pork-e-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "chips-di-patate-fresche-con-pulled-pork-e-pistacchio"
+    },
+    "title": {
+      "it": "Chips di patate* fresche con pulled pork e pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 10.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.patate-dolci-al-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "patate-dolci-al-pistacchio"
+    },
+    "title": {
+      "it": "Patate dolci* al pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "Stracciatella di bufala Campana, pesto di pistacchio, guanciale croccante, granella di pistacchio.",
+      "en": ""
+    },
+    "price": 10.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.tris-di-crocche-artigianali",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tris-di-crocche-artigianali"
+    },
+    "title": {
+      "it": "Tris di crocchè artigianali",
+      "en": ""
+    },
+    "description": {
+      "it": "Norma, porchetta e fonduta di parmigiano, mortadella 4 Castelli I.G.P. e pistacchio.",
+      "en": ""
+    },
+    "price": 12.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.tris-di-montanarine",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tris-di-montanarine"
+    },
+    "title": {
+      "it": "Tris di montanarine",
+      "en": ""
+    },
+    "description": {
+      "it": "Salsa di pomodoro San Marzano bio e parmigiano reggiano grattugiato; vellutata di spinaci* home made e ricotta fresca; carbonara.",
+      "en": ""
+    },
+    "price": 12.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.fritto-misto",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "fritto-misto"
+    },
+    "title": {
+      "it": "Fritto misto*",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.magic-box",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "magic-box"
+    },
+    "title": {
+      "it": "Magic Box",
+      "en": ""
+    },
+    "description": {
+      "it": "Strisce di pasta fritta, mortadella 4 Castelli I.G.P., figliata di bufala 500gr, pesto, polvere e granella di pistacchio. (Consigliato per 4 persone).",
+      "en": ""
+    },
+    "price": 25,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.tagliere-di-salumi-e-formaggi-piccolo",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tagliere-di-salumi-e-formaggi-piccolo"
+    },
+    "title": {
+      "it": "Tagliere di salumi e formaggi (Piccolo)",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 16,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.tagliere-di-salumi-e-formaggi-grande",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tagliere-di-salumi-e-formaggi-grande"
+    },
+    "title": {
+      "it": "Tagliere di salumi e formaggi (Grande)",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 32,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.antipasti.apericena-del-giorno-escluso-cocktail",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.antipasti"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "apericena-del-giorno-escluso-cocktail"
+    },
+    "title": {
+      "it": "Apericena del giorno (escluso cocktail)",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 17,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.calzoni.calzon-pizza",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.calzoni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calzon-pizza"
+    },
+    "title": {
+      "it": "Calzon Pizza",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, prosciutto cotto, pepe.",
+      "en": ""
+    },
+    "price": 12.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.calzoni.calzon-pizza-al-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.calzoni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calzon-pizza-al-pistacchio"
+    },
+    "title": {
+      "it": "Calzon Pizza al pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, prosciutto crudo di Parma stagionato, patate* dolci, mozzarella fior di latte, pesto di pistacchio, polvere di pistacchio e burrata.",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.margherita",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "margherita"
+    },
+    "title": {
+      "it": "Margherita",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, olio EVO D.O.P., basilico fresco.",
+      "en": ""
+    },
+    "price": 8,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.margherita-sbagliata",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "margherita-sbagliata"
+    },
+    "title": {
+      "it": "Margherita sbagliata",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, ciliegino giallo e rosso, pesto di basilico, pluma made, basilico.",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.provola-e-pepe",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "provola-e-pepe"
+    },
+    "title": {
+      "it": "Provola e pepe",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, provola affumicata fresca, pepe, olio EVO D.O.P.",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.margherita-con-bufala",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "margherita-con-bufala"
+    },
+    "title": {
+      "it": "Margherita con bufala",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella di bufala, basilico fresco, olio EVO D.O.P.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.capricciosa",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "capricciosa"
+    },
+    "title": {
+      "it": "Capricciosa",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, prosciutto cotto Veroni, funghi, uova.",
+      "en": ""
+    },
+    "price": 13,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.parmigiana",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "parmigiana"
+    },
+    "title": {
+      "it": "Parmigiana",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, uovo, prosciutto cotto Veroni, chips di melanzane, fonduta di grana padano D.O.P., pesto D.O.P. e basilico fresco.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.pata-pizza",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "pata-pizza"
+    },
+    "title": {
+      "it": "Patà Pizza",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, patatine dippers*, würstel.",
+      "en": ""
+    },
+    "price": 10.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.tonnara-2-0",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tonnara-2-0"
+    },
+    "title": {
+      "it": "Tonnara 2.0",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, pomodorini semidry, salsa tonnata, filetto di tonno, polvere di olive, uova, basilico, olio.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "fish",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.diavola",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "diavola"
+    },
+    "title": {
+      "it": "Diavola",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, salame piccante, cipolletta fresca, olive.",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.zucchina",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "zucchina"
+    },
+    "title": {
+      "it": "Zucchina",
+      "en": ""
+    },
+    "description": {
+      "it": "Vellutata di zucchine* home made, mozzarella fior di latte, chips di zucchine, scaglie di ricotta secca.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.5-formaggi",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "5-formaggi"
+    },
+    "title": {
+      "it": "5 Formaggi",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, gorgonzola piccante, provola affumicata, crema di parmigiano, provolone del monaco, confettura di fragole.",
+      "en": ""
+    },
+    "price": 13,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.norma",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "norma"
+    },
+    "title": {
+      "it": "Norma",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, melanzane fritte, mousse di ricotta salata, basilico fresco.",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-classiche.campana",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-classiche"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campana"
+    },
+    "title": {
+      "it": "Campana",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, prosciutto crudo di Parma stagionato, stracciatella di bufala, basilico fresco.",
+      "en": ""
+    },
+    "price": 13,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n1",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n1"
+    },
+    "title": {
+      "it": "N1",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di piselli*, pancetta coppata, carciofi croccanti, fonduta di formaggio, pecorino grattugiato.",
+      "en": ""
+    },
+    "price": 14.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n2",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n2"
+    },
+    "title": {
+      "it": "N2",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, pesto di pistacchio in D.O.P., pepe e granella di pistacchio, mozzarella fior di latte, burrata al centro, scaglie di grana padano D.O.P., salumi a scelta.",
+      "en": ""
+    },
+    "price": 16,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n3",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n3"
+    },
+    "title": {
+      "it": "N3",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, cipolla caramellata, pulled pork, chips di patate*, salsa cheddar.",
+      "en": ""
+    },
+    "price": 17,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n4",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n4"
+    },
+    "title": {
+      "it": "N4",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella di bufala a crudo per ogni fetta, prosciutto crudo di Parma stagionato, basilico, pomodori secchi, olio EVO D.O.P.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n5",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n5"
+    },
+    "title": {
+      "it": "N5",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, stracciatella, datterino giallo e rosso, prosciutto crudo di Parma stagionato, olio EVO D.O.P., basilico fresco, scaglie di grana padano D.O.P., rucola.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n6",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n6"
+    },
+    "title": {
+      "it": "N6",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di zucchine home made, mozzarella fior di latte, salmone affumicato, ciliegino confit, scaglie di grana.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "fish",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n7",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n7"
+    },
+    "title": {
+      "it": "N7",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di spinaci*, mozzarella sorrentina, speck, ricotta fresca, mandorle tostate.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n8",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n8"
+    },
+    "title": {
+      "it": "N8",
+      "en": ""
+    },
+    "description": {
+      "it": "Salsa di pomodorino giallo, mozzarella fior di latte, verdure grigliate condite, pomodoro confit, pecorino grattugiato.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n9",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n9"
+    },
+    "title": {
+      "it": "N9",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, funghi porcini*, salsiccia, stracciatella di bufala, tartufo nero, semi di sesamo, olio al tartufo.",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "sesame"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n10",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n10"
+    },
+    "title": {
+      "it": "N10",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di zucca, mozzarella fior di latte, gorgonzola, burrata, speck Veroni.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n11",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n11"
+    },
+    "title": {
+      "it": "N11",
+      "en": ""
+    },
+    "description": {
+      "it": "Pomodoro San Marzano, mozzarella fior di latte, noci, finocchietto selvatico, cuddra sotto sale, ciliegino confit, stracciatella, olio EVO D.O.P.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n12",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n12"
+    },
+    "title": {
+      "it": "N12",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, mozzarella fior di latte, patatine dippers*, pesto di pistacchio, polvere e granella di pistacchio, stracciatella di bufala.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n13",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n13"
+    },
+    "title": {
+      "it": "N13",
+      "en": ""
+    },
+    "description": {
+      "it": "Ricotta fresca, mozzarella fior di latte, friarielli, provola affumicata, salsiccia, tarallo sbriciolato.",
+      "en": ""
+    },
+    "price": 14.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n14",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n14"
+    },
+    "title": {
+      "it": "N14",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella fior di latte, porchetta di Ariccia, patate al forno, olive nere siciliane, provola affumicata.",
+      "en": ""
+    },
+    "price": 14.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n15-consigliato-per-2-persone",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n15-consigliato-per-2-persone"
+    },
+    "title": {
+      "it": "N15 (Consigliato per 2 persone)",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, mozzarella fior di latte, prosciutto crudo di Parma stagionato, patate* dolci, mortadella 4 Castelli I.G.P. con pistacchio, figliata di bufala, pesto, polvere e granella di pistacchio.",
+      "en": ""
+    },
+    "price": 25,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n16",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n16"
+    },
+    "title": {
+      "it": "N16",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, mozzarella fior di latte, pulled pork, chips di patate*, stracciatella di bufala, pesto e polvere di pistacchio.",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-creazioni.n17",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-creazioni"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "n17"
+    },
+    "title": {
+      "it": "N17",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, mozzarella fior di latte, provola affumicata, porchetta di Ariccia I.G.P., patate fresche, burrata, ciliegino giallo confit, pesto, polvere e granella di pistacchio.",
+      "en": ""
+    },
+    "price": 17,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-d-autore.margherita-bio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-d-autore"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "margherita-bio"
+    },
+    "title": {
+      "it": "Margherita Bio",
+      "en": ""
+    },
+    "description": {
+      "it": "Passata di pomodoro e ciliegino giallo, mozzarella di bufala, perlage di basilico.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-d-autore.carbonara",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-d-autore"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "carbonara"
+    },
+    "title": {
+      "it": "Carbonara",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella sorrentina, guanciale croccante, pecorino grattugiato, pepe nero.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-d-autore.pera-cotta",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-d-autore"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "pera-cotta"
+    },
+    "title": {
+      "it": "Pera cotta",
+      "en": ""
+    },
+    "description": {
+      "it": "Mozzarella sorrentina, gorgonzola, pera cotta in agrodolce, pancetta coppata, noci tostate.",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizze-d-autore.la-norvegese",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizze-d-autore"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "la-norvegese"
+    },
+    "title": {
+      "it": "La Norvegese",
+      "en": ""
+    },
+    "description": {
+      "it": "Stracciatella di bufala a crudo, salmone norvegese, maionese di limone, prezzemolo.",
+      "en": ""
+    },
+    "price": 14.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "fish",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-stelle.400-gradi-margherita",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-stelle"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "400-gradi-margherita"
+    },
+    "title": {
+      "it": "400 Gradi Margherita",
+      "en": ""
+    },
+    "description": {
+      "it": "Margherita a forma di stella con bordi ripieni di mozzarella fior di latte, salsa di pomodoro, burrata al centro, basilico fresco.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-stelle.400-gradi-zucca",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-stelle"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "400-gradi-zucca"
+    },
+    "title": {
+      "it": "400 Gradi Zucca",
+      "en": ""
+    },
+    "description": {
+      "it": "Punte di stella ripiene di mozzarella fior di latte, crema di zucca, base crema di zucca, salsiccia, scaglie di grana padano D.O.P.",
+      "en": ""
+    },
+    "price": 16,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.le-nostre-stelle.400-gradi-pera",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.le-nostre-stelle"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "400-gradi-pera"
+    },
+    "title": {
+      "it": "400 Gradi Pera",
+      "en": ""
+    },
+    "description": {
+      "it": "Punte ripiene di crema di pistacchio e mozzarella fior di latte; salumi a scelta; scaglie di grana padano D.O.P.; pesto; polvere e granella di pistacchio.",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizzoli.pizzolo-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizzoli"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "pizzolo-pistacchio"
+    },
+    "title": {
+      "it": "Pizzolo Pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "Crema di pistacchio, mozzarella fior di latte, stracciatella, mortadella 4 Castelli I.G.P., burrata all’uscita, polvere e granella di pistacchio.",
+      "en": ""
+    },
+    "price": 17,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.pizzoli.pizzolo-porchetta",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.pizzoli"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "pizzolo-porchetta"
+    },
+    "title": {
+      "it": "Pizzolo Porchetta",
+      "en": ""
+    },
+    "description": {
+      "it": "Provola affumicata, porchetta di Ariccia I.G.P., mozzarella fior di latte, stracciatella, patate fresche a fette, olive nere.",
+      "en": ""
+    },
+    "price": 15,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.hamburger.hamburger-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.hamburger"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hamburger-pistacchio"
+    },
+    "title": {
+      "it": "Hamburger Pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "Hamburger di manzo, pesto di pistacchio, bacon croccante, cipolla caramellata, patate a fette, burrata.",
+      "en": ""
+    },
+    "price": 15.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.hamburger.hamburger-cheddar",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.hamburger"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hamburger-cheddar"
+    },
+    "title": {
+      "it": "Hamburger Cheddar",
+      "en": ""
+    },
+    "description": {
+      "it": "Doppio hamburger di manzo, cheddar, cipolla caramellata, bacon croccante.",
+      "en": ""
+    },
+    "price": 14.5,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.hamburger.hamburger-pollo",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.hamburger"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hamburger-pollo"
+    },
+    "title": {
+      "it": "Hamburger Pollo",
+      "en": ""
+    },
+    "description": {
+      "it": "Cotoletta di pollo, pomodoro, iceberg, formaggio fuso, maionese, ketchup.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "eggs",
+      "dairy"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.hamburger.hamburger-pulled-pork",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.hamburger"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hamburger-pulled-pork"
+    },
+    "title": {
+      "it": "Hamburger Pulled Pork",
+      "en": ""
+    },
+    "description": {
+      "it": "Pesto di pistacchio, pulled pork, chips di patate e stracciatella.",
+      "en": ""
+    },
+    "price": 16,
+    "tags": [],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.dolci.dolce-del-giorno",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.dolci"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "dolce-del-giorno"
+    },
+    "title": {
+      "it": "Dolce del giorno",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.dolci.frittelline-nutella",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.dolci"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "frittelline-nutella"
+    },
+    "title": {
+      "it": "Frittelline Nutella",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.dolci.frittelline-pistacchio",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.dolci"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "frittelline-pistacchio"
+    },
+    "title": {
+      "it": "Frittelline Pistacchio",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [
+      "dairy",
+      "nuts"
+    ],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.dolci.frittelline-baby",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.dolci"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "frittelline-baby"
+    },
+    "title": {
+      "it": "Frittelline Baby",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.dolci.frittelline-maxi",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.dolci"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "frittelline-maxi"
+    },
+    "title": {
+      "it": "Frittelline Maxi",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 13,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.acqua-naturale",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "acqua-naturale"
+    },
+    "title": {
+      "it": "Acqua naturale",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 2.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.acqua-frizzante",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "acqua-frizzante"
+    },
+    "title": {
+      "it": "Acqua frizzante",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 2.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.coca-cola-33-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "coca-cola-33-cl"
+    },
+    "title": {
+      "it": "Coca Cola 33 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 3,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.coca-cola-zero-33-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "coca-cola-zero-33-cl"
+    },
+    "title": {
+      "it": "Coca Cola Zero 33 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 3,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.fanta-33-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "fanta-33-cl"
+    },
+    "title": {
+      "it": "Fanta 33 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 3,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.coca-cola-1-lt",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "coca-cola-1-lt"
+    },
+    "title": {
+      "it": "Coca Cola 1 lt",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.bevande.coca-cola-zero-1-lt",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.bevande"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "coca-cola-zero-1-lt"
+    },
+    "title": {
+      "it": "Coca Cola Zero 1 lt",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birre-alla-spina.fischer-0-40-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birre-alla-spina"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "fischer-0-40-cl"
+    },
+    "title": {
+      "it": "Fischer 0,40 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 6,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birre-alla-spina.messina-cristalli-di-sale-0-40-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birre-alla-spina"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "messina-cristalli-di-sale-0-40-cl"
+    },
+    "title": {
+      "it": "Messina Cristalli di Sale 0,40 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 6,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birre-alla-spina.affligem-la-rouge-0-30-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birre-alla-spina"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "affligem-la-rouge-0-30-cl"
+    },
+    "title": {
+      "it": "Affligem La Rouge 0,30 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 6,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.juno",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "juno"
+    },
+    "title": {
+      "it": "Juno",
+      "en": ""
+    },
+    "description": {
+      "it": "Birra artigianale ambrata con note di arancia di Sicilia, frutti di bosco e caramello.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.ulysses",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ulysses"
+    },
+    "title": {
+      "it": "Ulysses",
+      "en": ""
+    },
+    "description": {
+      "it": "Birra bionda non filtrata con note agrumate e speziate.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.hephaestus",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hephaestus"
+    },
+    "title": {
+      "it": "Hephaestus",
+      "en": ""
+    },
+    "description": {
+      "it": "Birra rossa con note di nocciola dell’Etna e caramello.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.polyphemus",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "polyphemus"
+    },
+    "title": {
+      "it": "Polyphemus",
+      "en": ""
+    },
+    "description": {
+      "it": "Italian Grape Ale con mosto d’uva e note fruttate/caramello.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.prometheus",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "prometheus"
+    },
+    "title": {
+      "it": "Prometheus",
+      "en": ""
+    },
+    "description": {
+      "it": "Birra scura (Imperial Stout) con note di ciliegia, cioccolato e caffè.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.birrificio-delletna.heracles",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.birrificio-delletna"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "heracles"
+    },
+    "title": {
+      "it": "Heracles",
+      "en": ""
+    },
+    "description": {
+      "it": "Birra bionda (Pistacchio verde di Bronte D.O.P.) con note di pistacchio.",
+      "en": ""
+    },
+    "price": 7.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.paolini-frappato-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "paolini-frappato-75-cl"
+    },
+    "title": {
+      "it": "Paolini Frappato 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 14,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.barone-montalto",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "barone-montalto"
+    },
+    "title": {
+      "it": "Barone Montalto",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 25,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.murgo-etna-rosso-tenuta-san-michele",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "murgo-etna-rosso-tenuta-san-michele"
+    },
+    "title": {
+      "it": "Murgo Etna Rosso (Tenuta San Michele)",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 35,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.firriato-harmonium-nero-davola-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "firriato-harmonium-nero-davola-75-cl"
+    },
+    "title": {
+      "it": "Firriato Harmonium Nero d’Avola 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 40,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.tornatore-pietrarizzo-rosso-doc-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "tornatore-pietrarizzo-rosso-doc-75-cl"
+    },
+    "title": {
+      "it": "Tornatore Pietrarizzo Rosso DOC 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 28,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.firriato-sabbie-etna-rosso-doc-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "firriato-sabbie-etna-rosso-doc-75-cl"
+    },
+    "title": {
+      "it": "Firriato Sabbie Etna Rosso DOC 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 30,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.valle-dellacate",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "valle-dellacate"
+    },
+    "title": {
+      "it": "Valle dell’Acate",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 20,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.duca-di-salaparuta-passo-delle-mule",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "duca-di-salaparuta-passo-delle-mule"
+    },
+    "title": {
+      "it": "Duca di Salaparuta Passo delle Mule",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.fina-syrah",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "fina-syrah"
+    },
+    "title": {
+      "it": "Fina Syrah",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.baglio-di-pianetto-nero-davola",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "baglio-di-pianetto-nero-davola"
+    },
+    "title": {
+      "it": "Baglio di Pianetto Nero d’Avola",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 32,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.benanti-etna-rosso",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "benanti-etna-rosso"
+    },
+    "title": {
+      "it": "Benanti Etna Rosso",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 32,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.paolini-etna-focu",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "paolini-etna-focu"
+    },
+    "title": {
+      "it": "Paolini Etna Focu",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 32,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.valpolicella-ripasso",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "valpolicella-ripasso"
+    },
+    "title": {
+      "it": "Valpolicella Ripasso",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 32,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.paolini-bianco-frizzante-sciavuru-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "paolini-bianco-frizzante-sciavuru-75-cl"
+    },
+    "title": {
+      "it": "Paolini Bianco Frizzante Sciavuru 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.brugnano-v90-grillo-75-cl",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "brugnano-v90-grillo-75-cl"
+    },
+    "title": {
+      "it": "Brugnano V90 Grillo 75 cl",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 18,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.fina-kike",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "fina-kike"
+    },
+    "title": {
+      "it": "Fina Kikè",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.serauva-murgo-catarratto",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "serauva-murgo-catarratto"
+    },
+    "title": {
+      "it": "Serauva Murgo Catarratto",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.duca-di-salaparuta-kados",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "duca-di-salaparuta-kados"
+    },
+    "title": {
+      "it": "Duca di Salaparuta Kados",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.gorghi-tondi-maremeo",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "gorghi-tondi-maremeo"
+    },
+    "title": {
+      "it": "Gorghi Tondi Maremeo",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 20,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.planeta-bianco",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "planeta-bianco"
+    },
+    "title": {
+      "it": "Planeta Bianco",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 22,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-rossi.calice-di-vino-rosso",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-rossi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calice-di-vino-rosso"
+    },
+    "title": {
+      "it": "Calice di vino rosso",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.vini-bianchi.calice-di-vino-bianco",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.vini-bianchi"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "calice-di-vino-bianco"
+    },
+    "title": {
+      "it": "Calice di vino bianco",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.aperol-spritz",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "aperol-spritz"
+    },
+    "title": {
+      "it": "Aperol Spritz",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 8,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.campari-spritz",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "campari-spritz"
+    },
+    "title": {
+      "it": "Campari Spritz",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 9,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.saint-germain-spritz",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "saint-germain-spritz"
+    },
+    "title": {
+      "it": "Saint Germain Spritz",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.gin-tonic",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "gin-tonic"
+    },
+    "title": {
+      "it": "Gin Tonic",
+      "en": ""
+    },
+    "description": {
+      "it": "Gin, tonica, pepe rosa, fetta di limone.",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.gin-lemon",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "gin-lemon"
+    },
+    "title": {
+      "it": "Gin Lemon",
+      "en": ""
+    },
+    "description": {
+      "it": "Gin, lemon, lime.",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.mojito",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "mojito"
+    },
+    "title": {
+      "it": "Mojito",
+      "en": ""
+    },
+    "description": {
+      "it": "Rum bianco, lime, zucchero di canna, menta, soda di limone.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.moscow-mule",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "moscow-mule"
+    },
+    "title": {
+      "it": "Moscow Mule",
+      "en": ""
+    },
+    "description": {
+      "it": "Vodka, ginger beer, succo di lime, fettina di lime.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.negroni",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "negroni"
+    },
+    "title": {
+      "it": "Negroni",
+      "en": ""
+    },
+    "description": {
+      "it": "Campari, martini rosso, gin.",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.negroni-sbagliato",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "negroni-sbagliato"
+    },
+    "title": {
+      "it": "Negroni Sbagliato",
+      "en": ""
+    },
+    "description": {
+      "it": "Campari, martini rosso, prosecco.",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.capiroska-alla-fragola",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "capiroska-alla-fragola"
+    },
+    "title": {
+      "it": "Capiroska alla fragola",
+      "en": ""
+    },
+    "description": {
+      "it": "Vodka, sciroppo di fragola, soda, succo di limone, lime.",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.long-island",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "long-island"
+    },
+    "title": {
+      "it": "Long Island",
+      "en": ""
+    },
+    "description": {
+      "it": "Vodka, gin, tequila, triple sec, rum bianco, coca cola, lime.",
+      "en": ""
+    },
+    "price": 12,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.american-ice-tea",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "american-ice-tea"
+    },
+    "title": {
+      "it": "American Ice Tea",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.old-american",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "old-american"
+    },
+    "title": {
+      "it": "Old American",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 11,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.cocktail-400-gradi",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "cocktail-400-gradi"
+    },
+    "title": {
+      "it": "Cocktail 400 Gradi",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 10,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.amaro",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "amaro"
+    },
+    "title": {
+      "it": "Amaro",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 3,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.analcolico-fruttato",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "analcolico-fruttato"
+    },
+    "title": {
+      "it": "Analcolico fruttato",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.virgin-mojito",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "virgin-mojito"
+    },
+    "title": {
+      "it": "Virgin Mojito",
+      "en": ""
+    },
+    "description": {
+      "it": "Succo di lime e succo d’ananas, menta, zucchero, limonata.",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.lemon-swimmer",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "lemon-swimmer"
+    },
+    "title": {
+      "it": "Lemon Swimmer",
+      "en": ""
+    },
+    "description": {
+      "it": "Succo d’ananas, sciroppo di fragola, limonata.",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.frozen-pineapple",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "frozen-pineapple"
+    },
+    "title": {
+      "it": "Frozen Pineapple",
+      "en": ""
+    },
+    "description": {
+      "it": "Succo d’ananas, sciroppo di mela, sprite.",
+      "en": ""
+    },
+    "price": 7,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.cocktail.amari-e-grappe",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.cocktail"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "amari-e-grappe"
+    },
+    "title": {
+      "it": "Amari e grappe",
+      "en": ""
+    },
+    "description": {
+      "it": "",
+      "en": ""
+    },
+    "price": 4,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  },
+  {
+    "_id": "menuItem.caffe.caffe",
+    "_type": "menuItem",
+    "category": {
+      "_type": "reference",
+      "_ref": "category.caffe"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "caffe"
+    },
+    "title": {
+      "it": "Caffè",
+      "en": ""
+    },
+    "description": {
+      "it": "Espresso / lungo.",
+      "en": ""
+    },
+    "price": 1.5,
+    "tags": [],
+    "allergens": [],
+    "modifiers": [],
+    "isActive": true,
+    "sortOrder": 0,
+    "mainImage": null,
+    "gallery": []
+  }
+]

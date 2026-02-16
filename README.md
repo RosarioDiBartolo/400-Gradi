@@ -1,6 +1,7 @@
 ﻿# 400 Gradi Menu
 
 Digital restaurant menu (food + drinks) built with Next.js App Router and Tailwind CSS.
+Supports optional images (item mainImage/gallery, category image) from Sanity.
 
 ## Environment variables (Sanity)
 - NEXT_PUBLIC_SANITY_PROJECT_ID
@@ -24,3 +25,24 @@ Env vars (used later by Next.js):
 - NEXT_PUBLIC_SANITY_API_VERSION
 
 Note: Data lives in Sanity Cloud; the Studio is a local/admin UI.
+
+## Seed CMS data
+Rebuild the dataset from the seed files:
+1. cd cms
+2. npm run seed
+
+Optional env vars:
+- `SEED_FILE` (default: `import/menu.ndjson`)
+- `SEED_REPLACE` (`false` to avoid `--replace`; default replaces the dataset)
+
+## Sanity type generation
+Keep CMS schemas and GROQ query result types in sync:
+1. cd cms
+2. npm run typegen
+
+This generates:
+- `cms/schema.json` (schema snapshot)
+- `src/types/sanity.types.ts` (schema + GROQ query result types)
+
+Config lives in `cms/sanity-typegen.json`.
+Generated files are gitignored, so run typegen after cloning or when schemas/queries change.
