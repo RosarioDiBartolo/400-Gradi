@@ -9,7 +9,7 @@ export default async function DrinksPage() {
     const message =
       error instanceof Error ? error.message : "Errore nel caricamento.";
     return (
-      <div className="rounded-md border p-4 text-sm text-muted-foreground">
+      <div className="border border-border/70 bg-surface p-6 text-sm text-muted-foreground">
         {message}
       </div>
     );

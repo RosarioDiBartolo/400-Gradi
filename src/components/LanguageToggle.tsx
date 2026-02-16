@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { LANG_EVENT, getStoredLang, setStoredLang, type Lang } from "@/lib/i18n/lang";
+import { cn } from "@/lib/utils";
 
 const labels = {
   it: "IT",
@@ -22,20 +23,33 @@ export default function LanguageToggle() {
     };
   }, []);
 
-  const toggle = () => {
-    const next = lang === "it" ? "en" : "it";
+  const setLanguage = (next: Lang) => {
     setStoredLang(next);
     setLang(next);
   };
 
   return (
-    <button
-      type="button"
-      onClick={toggle}
-      className="rounded-md border px-3 py-1 text-xs font-medium uppercase tracking-wide"
-      aria-label="Toggle language"
+    <div
+      role="group"
+      aria-label="Language switcher"
+      className="inline-flex items-center rounded-full border border-border/80 bg-surface p-1"
     >
-      {labels[lang]}
-    </button>
+      {(Object.keys(labels) as Lang[]).map((option) => (
+        <button
+          key={option}
+          type="button"
+          onClick={() => setLanguage(option)}
+          className={cn(
+            "rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] transition-colors",
+            lang === option
+              ? "bg-gold text-background"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+          aria-pressed={lang === option}
+        >
+          {labels[option]}
+        </button>
+      ))}
+    </div>
   );
 }

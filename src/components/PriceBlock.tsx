@@ -1,11 +1,14 @@
 import type { Variant } from "@/types/menu";
-import type { Lang } from "@/lib/i18n/lang";
-import { getLocalized } from "@/lib/i18n/lang";
+import type { Lang, LocalizeFn } from "@/lib/i18n/lang";
+import { cn } from "@/lib/utils";
 
 type PriceBlockProps = {
   basePrice?: number | null;
   variants?: Variant[] | null;
   lang: Lang;
+  localize: LocalizeFn;
+  compact?: boolean;
+  className?: string;
 };
 
 const ui = {
@@ -19,26 +22,60 @@ const ui = {
 
 const sortByOrder = (a: Variant, b: Variant) => (a.order ?? 0) - (b.order ?? 0);
 
-const formatPrice = (price: number) => `${price.toFixed(2)} EUR`;
+const formatPrice = (price: number, lang: Lang) =>
+  new Intl.NumberFormat(lang === "it" ? "it-IT" : "en-US", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 2,
+  }).format(price);
+
+const resolveMainPrice = (
+  basePrice?: number | null,
+  variants?: Variant[] | null
+) => {
+  if (typeof basePrice === "number") return basePrice;
+  if (!variants || variants.length === 0) return null;
+  const ordered = variants.slice().sort(sortByOrder);
+  const preferred = ordered.find((variant) => variant.isDefault);
+  return preferred?.price ?? ordered[0]?.price ?? null;
+};
 
 export default function PriceBlock({
   basePrice,
   variants,
   lang,
+  localize,
+  compact = false,
+  className,
 }: PriceBlockProps) {
-  if (variants && variants.length > 0) {
-    const ordered = variants.slice().sort(sortByOrder);
+  const orderedVariants = (variants ?? []).slice().sort(sortByOrder);
+  const primaryPrice = resolveMainPrice(basePrice, orderedVariants);
+
+  if (compact && typeof primaryPrice === "number") {
     return (
-      <div className="min-w-[96px] text-right text-sm">
-        {ordered.map((variant) => (
+      <div
+        className={cn(
+          "min-w-[88px] text-right text-[1.05rem] font-medium text-gold",
+          className
+        )}
+      >
+        {formatPrice(primaryPrice, lang)}
+      </div>
+    );
+  }
+
+  if (variants && variants.length > 0) {
+    return (
+      <div className={cn("min-w-[120px] space-y-1 text-right text-sm", className)}>
+        {orderedVariants.map((variant) => (
           <div
             key={`${variant.label.it}-${variant.order}-${variant.price}`}
             className="flex justify-between gap-2"
           >
-            <span className="text-muted-foreground">
-              {getLocalized(variant.label, lang)}
+            <span className="text-muted-foreground">{localize(variant.label, lang)}</span>
+            <span className="font-medium text-gold">
+              {formatPrice(variant.price, lang)}
             </span>
-            <span className="font-medium">{formatPrice(variant.price)}</span>
           </div>
         ))}
       </div>
@@ -47,14 +84,19 @@ export default function PriceBlock({
 
   if (typeof basePrice === "number") {
     return (
-      <div className="min-w-[96px] text-right text-sm font-semibold">
-        {formatPrice(basePrice)}
+      <div
+        className={cn(
+          "min-w-[96px] text-right text-[1.05rem] font-medium text-gold",
+          className
+        )}
+      >
+        {formatPrice(basePrice, lang)}
       </div>
     );
   }
 
   return (
-    <div className="min-w-[96px] text-right text-xs text-muted-foreground">
+    <div className={cn("min-w-[96px] text-right text-xs text-muted-foreground", className)}>
       {ui[lang].priceUnavailable}
     </div>
   );

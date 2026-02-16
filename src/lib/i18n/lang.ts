@@ -1,6 +1,8 @@
 import type { i18nString, i18nText } from "@/types/menu";
 
 export type Lang = "it" | "en";
+export type LocalizedField = i18nString | i18nText | undefined | null;
+export type LocalizeFn = (field: LocalizedField, lang: Lang) => string;
 
 const STORAGE_KEY = "menu.lang";
 export const LANG_EVENT = "menu:lang-change";
@@ -18,9 +20,20 @@ export const setStoredLang = (lang: Lang) => {
 };
 
 export const getLocalized = (
-  field: i18nString | i18nText | undefined | null,
+  field: LocalizedField,
   lang: Lang
 ): string => {
   if (!field) return "";
-  return field[lang] ?? field.it ?? "";
+
+  const preferred = field[lang];
+  if (typeof preferred === "string" && preferred.trim().length > 0) {
+    return preferred;
+  }
+
+  const fallback = field.it;
+  if (typeof fallback === "string" && fallback.trim().length > 0) {
+    return fallback;
+  }
+
+  return "";
 };

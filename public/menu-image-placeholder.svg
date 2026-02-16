@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">400 Gradi menu image placeholder</title>
+  <desc id="desc">Luxury dark placeholder with gold accents for missing menu images.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#121212" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect x="68" y="68" width="1064" height="764" fill="none" stroke="#C9A24D" stroke-opacity="0.45" />
+  <line x1="68" y1="450" x2="1132" y2="450" stroke="#C9A24D" stroke-opacity="0.35" />
+  <line x1="600" y1="68" x2="600" y2="832" stroke="#C9A24D" stroke-opacity="0.2" />
+  <text x="600" y="398" text-anchor="middle" fill="#F2F2F2" font-size="64" font-family="Georgia, 'Times New Roman', serif" letter-spacing="1.2">
+    400 Gradi
+  </text>
+  <text x="600" y="468" text-anchor="middle" fill="#C9A24D" font-size="26" font-family="Arial, sans-serif" letter-spacing="7">
+    SICILIA GOURMET
+  </text>
+  <text x="600" y="522" text-anchor="middle" fill="#9A9A9A" font-size="24" font-family="Arial, sans-serif" letter-spacing="4">
+    IMAGE COMING SOON
+  </text>
+</svg>
