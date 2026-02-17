@@ -5,7 +5,6 @@ export type LocalizedField = i18nString | i18nText | undefined | null;
 export type LocalizeFn = (field: LocalizedField, lang: Lang) => string;
 
 const STORAGE_KEY = "menu.lang";
-export const LANG_EVENT = "menu:lang-change";
 
 export const getStoredLang = (): Lang => {
   if (typeof window === "undefined") return "it";
@@ -16,7 +15,6 @@ export const getStoredLang = (): Lang => {
 export const setStoredLang = (lang: Lang) => {
   if (typeof window === "undefined") return;
   window.localStorage.setItem(STORAGE_KEY, lang);
-  window.dispatchEvent(new Event(LANG_EVENT));
 };
 
 export const getLocalized = (
