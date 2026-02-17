@@ -6,6 +6,11 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata: Metadata = {
   title: "400 Gradi",
   description: "Digital menu for 400 Gradi.",
+  icons: {
+    icon: "/favicon-rounded.png",
+    shortcut: "/favicon-rounded.png",
+    apple: "/favicon-rounded.png",
+  },
 };
 
 export default function RootLayout({
