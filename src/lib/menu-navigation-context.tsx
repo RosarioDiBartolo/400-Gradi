@@ -7,6 +7,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { getVisibleHeaderOffset } from "@/lib/menu/navigation";
 
 type MenuCategoryLink = {
   id: string;
@@ -33,18 +34,6 @@ type MenuNavigationContextValue = {
 const MenuNavigationContext = createContext<MenuNavigationContextValue | undefined>(
   undefined
 );
-
-const getVisibleHeaderOffset = (): number => {
-  const fixedHeader = document.getElementById("site-fixed-header");
-  if (fixedHeader) {
-    const rect = fixedHeader.getBoundingClientRect();
-    const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight));
-    if (visibleHeight > 0) return visibleHeight;
-  }
-
-  const spacer = document.getElementById("site-header-spacer");
-  return spacer?.getBoundingClientRect().height ?? 136;
-};
 
 const sortCategoriesByRenderedOrder = (input: MenuCategoryLink[]): MenuCategoryLink[] => {
   if (typeof window === "undefined") return input;

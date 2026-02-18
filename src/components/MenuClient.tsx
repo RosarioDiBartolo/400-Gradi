@@ -14,6 +14,11 @@ import {
   normalizeAutoTranslationKey,
   translateItalianToEnglish,
 } from "@/lib/i18n/auto-translate";
+import {
+  createCategoryAnchorId,
+  getVisibleHeaderOffset,
+} from "@/lib/menu/navigation";
+import { sortByOrderAsc } from "@/lib/menu/order";
 import { useMenuNavigation } from "@/lib/menu-navigation-context";
 import { cn } from "@/lib/utils";
 import CategorySection from "./CategorySection";
@@ -45,12 +50,6 @@ const ui = {
   },
 };
 
-const sortByOrder = <T extends { order: number }>(a: T, b: T) =>
-  (a.order ?? 0) - (b.order ?? 0);
-
-const toAnchorId = (rawId: string) =>
-  `category-${rawId.toLowerCase().replace(/[^a-z0-9_-]/g, "-")}`;
-
 type MenuClientProps = {
   initialData: Category[];
   kind: "food" | "drink";
@@ -81,10 +80,10 @@ export default function MenuClient({ initialData, kind }: MenuClientProps) {
     () =>
       initialData
         .slice()
-        .sort(sortByOrder)
+        .sort(sortByOrderAsc)
         .map((category) => ({
           ...category,
-          items: (category.items ?? []).slice().sort(sortByOrder),
+          items: (category.items ?? []).slice().sort(sortByOrderAsc),
         })),
     [initialData]
   );
@@ -170,7 +169,7 @@ export default function MenuClient({ initialData, kind }: MenuClientProps) {
     () =>
       data.map((category) => ({
         ...category,
-        anchorId: toAnchorId(category._id),
+        anchorId: createCategoryAnchorId(category._id),
         label: localize(category.title, lang),
       })),
     [data, lang, localize]
@@ -211,12 +210,7 @@ export default function MenuClient({ initialData, kind }: MenuClientProps) {
       return;
     }
 
-    const fixedHeader = document.getElementById("site-fixed-header");
-    const fixedHeaderRect = fixedHeader?.getBoundingClientRect();
-    const headerOffset =
-      fixedHeaderRect && fixedHeaderRect.bottom > 0
-        ? Math.max(0, Math.min(fixedHeaderRect.bottom, window.innerHeight))
-        : (document.getElementById("site-header-spacer")?.getBoundingClientRect().height ?? 136);
+    const headerOffset = getVisibleHeaderOffset();
     const thresholdY = headerOffset + 12;
 
     let bestPast: { id: string; distance: number } | null = null;
