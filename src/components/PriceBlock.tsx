@@ -1,5 +1,6 @@
 import type { Variant } from "@/types/menu";
 import type { Lang, LocalizeFn } from "@/lib/i18n/lang";
+import { sortByOrderAsc } from "@/lib/menu/order";
 import { cn } from "@/lib/utils";
 
 type PriceBlockProps = {
@@ -20,8 +21,6 @@ const ui = {
   },
 };
 
-const sortByOrder = (a: Variant, b: Variant) => (a.order ?? 0) - (b.order ?? 0);
-
 const formatPrice = (price: number, lang: Lang) =>
   new Intl.NumberFormat(lang === "it" ? "it-IT" : "en-US", {
     style: "currency",
@@ -35,7 +34,7 @@ const resolveMainPrice = (
 ) => {
   if (typeof basePrice === "number") return basePrice;
   if (!variants || variants.length === 0) return null;
-  const ordered = variants.slice().sort(sortByOrder);
+  const ordered = variants.slice().sort(sortByOrderAsc);
   const preferred = ordered.find((variant) => variant.isDefault);
   return preferred?.price ?? ordered[0]?.price ?? null;
 };
@@ -48,7 +47,7 @@ export default function PriceBlock({
   compact = false,
   className,
 }: PriceBlockProps) {
-  const orderedVariants = (variants ?? []).slice().sort(sortByOrder);
+  const orderedVariants = (variants ?? []).slice().sort(sortByOrderAsc);
   const primaryPrice = resolveMainPrice(basePrice, orderedVariants);
 
   if (compact && typeof primaryPrice === "number") {

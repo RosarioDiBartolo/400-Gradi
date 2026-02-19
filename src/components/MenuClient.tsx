@@ -1,20 +1,25 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 import type { Category } from "@/types/menu";
 import {
-  LANG_EVENT,
   getLocalized,
-  getStoredLang,
   type LocalizeFn,
   type LocalizedField,
-  type Lang,
 } from "@/lib/i18n/lang";
+import { useLanguage } from "@/lib/i18n/language-context";
 import {
   getCachedAutoTranslation,
   normalizeAutoTranslationKey,
   translateItalianToEnglish,
 } from "@/lib/i18n/auto-translate";
+import {
+  createCategoryAnchorId,
+  getVisibleHeaderOffset,
+} from "@/lib/menu/navigation";
+import { sortByOrderAsc } from "@/lib/menu/order";
+import { useMenuNavigation } from "@/lib/menu-navigation-context";
 import { cn } from "@/lib/utils";
 import CategorySection from "./CategorySection";
 
@@ -45,37 +50,6 @@ const ui = {
   },
 };
 
-const sortByOrder = <T extends { order: number }>(a: T, b: T) =>
-  (a.order ?? 0) - (b.order ?? 0);
-
-const toAnchorId = (rawId: string) =>
-  `category-${rawId.toLowerCase().replace(/[^a-z0-9_-]/g, "-")}`;
-
-const easeInOutCubic = (t: number) =>
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-const smoothScrollTo = (targetY: number, duration = 650) => {
-  if (typeof window === "undefined") return;
-
-  const startY = window.scrollY;
-  const distance = targetY - startY;
-  const start = performance.now();
-
-  const step = (timestamp: number) => {
-    const elapsed = timestamp - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = easeInOutCubic(progress);
-
-    window.scrollTo(0, startY + distance * eased);
-
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
-  };
-
-  window.requestAnimationFrame(step);
-};
-
 type MenuClientProps = {
   initialData: Category[];
   kind: "food" | "drink";
@@ -92,29 +66,24 @@ const getMissingItalianText = (field: LocalizedField): string | null => {
 };
 
 export default function MenuClient({ initialData, kind }: MenuClientProps) {
-  const [lang, setLang] = useState<Lang>("it");
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const { lang } = useLanguage();
+  const {
+    setMenuNavigation,
+    clearMenuNavigation,
+    setActiveCategory,
+    activeCategory,
+  } = useMenuNavigation();
+  const { scrollY } = useScroll();
   const [autoTranslations, setAutoTranslations] = useState<Record<string, string>>({});
-
-  useEffect(() => {
-    const update = () => setLang(getStoredLang());
-    update();
-    window.addEventListener(LANG_EVENT, update);
-    window.addEventListener("storage", update);
-    return () => {
-      window.removeEventListener(LANG_EVENT, update);
-      window.removeEventListener("storage", update);
-    };
-  }, []);
 
   const data = useMemo(
     () =>
       initialData
         .slice()
-        .sort(sortByOrder)
+        .sort(sortByOrderAsc)
         .map((category) => ({
           ...category,
-          items: (category.items ?? []).slice().sort(sortByOrder),
+          items: (category.items ?? []).slice().sort(sortByOrderAsc),
         })),
     [initialData]
   );
@@ -200,70 +169,95 @@ export default function MenuClient({ initialData, kind }: MenuClientProps) {
     () =>
       data.map((category) => ({
         ...category,
-        anchorId: toAnchorId(category._id),
+        anchorId: createCategoryAnchorId(category._id),
         label: localize(category.title, lang),
       })),
     [data, lang, localize]
   );
 
-  const handleCategorySelect = useCallback((anchorId: string) => {
-    if (typeof window === "undefined") return;
+  useEffect(() => {
+    setMenuNavigation({
+      categories: sections.map((section) => ({
+        id: section._id,
+        anchorId: section.anchorId,
+        label: section.label,
+      })),
+      browseLabel: ui[lang].browseCategories,
+    });
+  }, [sections, lang, setMenuNavigation]);
 
-    const target = document.getElementById(anchorId);
-    if (!target) return;
+  useEffect(() => () => clearMenuNavigation(), [clearMenuNavigation]);
 
-    const topOffset = 136;
-    const targetY =
-      target.getBoundingClientRect().top + window.scrollY - topOffset;
+  const sectionAnchorIds = useMemo(
+    () => sections.map((section) => section.anchorId),
+    [sections]
+  );
 
-    setActiveCategory(anchorId);
-    smoothScrollTo(Math.max(0, targetY));
-  }, []);
+  const activeCategoryRef = useRef<string | null>(activeCategory);
 
   useEffect(() => {
-    if (sections.length === 0) {
-      setActiveCategory(null);
+    activeCategoryRef.current = activeCategory;
+  }, [activeCategory]);
+
+  const syncActiveCategoryFromViewport = useCallback(() => {
+    if (typeof window === "undefined") return;
+
+    if (sectionAnchorIds.length === 0) {
+      if (activeCategoryRef.current !== null) {
+        activeCategoryRef.current = null;
+        setActiveCategory(null);
+      }
       return;
     }
 
-    if (!activeCategory || !sections.some((section) => section.anchorId === activeCategory)) {
-      setActiveCategory(sections[0].anchorId);
+    const headerOffset = getVisibleHeaderOffset();
+    const thresholdY = headerOffset + 12;
+
+    let bestPast: { id: string; distance: number } | null = null;
+    let bestFuture: { id: string; distance: number } | null = null;
+
+    for (const anchorId of sectionAnchorIds) {
+      const element = document.getElementById(anchorId);
+      if (!element) continue;
+
+      const delta = element.getBoundingClientRect().top - thresholdY;
+      if (delta <= 0) {
+        const distance = Math.abs(delta);
+        if (!bestPast || distance < bestPast.distance) {
+          bestPast = { id: anchorId, distance };
+        }
+        continue;
+      }
+
+      if (!bestFuture || delta < bestFuture.distance) {
+        bestFuture = { id: anchorId, distance: delta };
+      }
     }
-  }, [sections, activeCategory]);
+
+    let nextActive: string | null = sectionAnchorIds[0] ?? null;
+    if (bestFuture) {
+      nextActive = bestFuture.id;
+    }
+    if (bestPast) {
+      nextActive = bestPast.id;
+    }
+    if (nextActive !== activeCategoryRef.current) {
+      activeCategoryRef.current = nextActive;
+      setActiveCategory(nextActive);
+    }
+  }, [sectionAnchorIds, setActiveCategory]);
+
+  useMotionValueEvent(scrollY, "change", () => {
+    syncActiveCategoryFromViewport();
+  });
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (sections.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top)
-          )[0];
-
-        if (visible?.target?.id) {
-          setActiveCategory(visible.target.id);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "-20% 0px -60% 0px",
-        threshold: [0.1, 0.35, 0.6],
-      }
-    );
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section.anchorId);
-      if (element) observer.observe(element);
-    });
-
+    syncActiveCategoryFromViewport();
+    window.addEventListener("resize", syncActiveCategoryFromViewport);
     return () => {
-      observer.disconnect();
+      window.removeEventListener("resize", syncActiveCategoryFromViewport);
     };
-  }, [sections]);
+  }, [syncActiveCategoryFromViewport]);
 
   const isFood = kind === "food";
   const kicker = isFood ? ui[lang].foodKicker : ui[lang].drinkKicker;
@@ -300,42 +294,16 @@ export default function MenuClient({ initialData, kind }: MenuClientProps) {
         <p className="text-sm text-muted-foreground">{ui[lang].empty}</p>
       ) : (
         <div className="space-y-[80px]">
-          <section className="sticky top-0 z-30 -mx-6 border-y border-border/70 bg-background/95 px-6 py-4 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-              {ui[lang].browseCategories}
-            </p>
-            <nav className="mt-3 overflow-x-auto">
-              <ul className="flex min-w-max items-center py-4">
-                {sections.map((section) => (
-                  <li key={section._id}>
-                    <button
-                      type="button"
-                      onClick={() => handleCategorySelect(section.anchorId)}
-                      className={cn(
-                        "border-b px-4 border-transparent pb-2 text-[12px] uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-300 hover:text-foreground",
-                        activeCategory === section.anchorId && "border-gold text-foreground"
-                      )}
-                    >
-                      {section.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </section>
-
-          <div className="space-y-[80px]">
-            {sections.map((category, index) => (
-              <CategorySection
-                key={category._id}
-                category={category}
-                lang={lang}
-                localize={localize}
-                anchorId={category.anchorId}
-                index={index}
-              />
-            ))}
-          </div>
+          {sections.map((category, index) => (
+            <CategorySection
+              key={category._id}
+              category={category}
+              lang={lang}
+              localize={localize}
+              anchorId={category.anchorId}
+              index={index}
+            />
+          ))}
         </div>
       )}
     </div>

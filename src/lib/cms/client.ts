@@ -9,6 +9,7 @@ import type {
   i18nText,
 } from "@/types/menu";
 import type { MenuByKindQueryResult } from "@/types/sanity.types";
+import { sortByOrderAsc } from "@/lib/menu/order";
 
 type FetchMenuResponse = {
   result?: MenuByKindQueryResult;
@@ -28,10 +29,6 @@ const getEnv = () => {
 
   return { projectId, dataset, apiVersion, token };
 };
-
-
-const sortByOrder = <T extends { order?: number | null }>(a: T, b: T) =>
-  (a.order ?? 0) - (b.order ?? 0);
 
 type RawCategory = MenuByKindQueryResult[number];
 type RawItem = RawCategory["items"][number];
@@ -75,13 +72,13 @@ const normalizeVariants = (variants?: RawVariant[] | null): Variant[] =>
       isDefault: variant.isDefault ?? null,
     }))
     .slice()
-    .sort(sortByOrder);
+    .sort(sortByOrderAsc);
 
 const normalizeItems = (items?: RawItem[] | null): Item[] =>
   (items ?? [])
     .filter((item) => item.isAvailable)
     .slice()
-    .sort(sortByOrder)
+    .sort(sortByOrderAsc)
     .map((item) => ({
       _id: item._id,
       name: normalizeI18nString(item.name),
@@ -102,7 +99,7 @@ const normalizeCategories = (
   (categories ?? [])
     .filter((category) => category.isActive)
     .slice()
-    .sort(sortByOrder)
+    .sort(sortByOrderAsc)
     .map((category) => ({
       _id: category._id,
       title: normalizeI18nString(category.title),
