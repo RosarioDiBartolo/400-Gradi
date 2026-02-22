@@ -1,7 +1,7 @@
 ﻿# Codebase map
 
 ## Entry points
-- Frontend: src/app/layout.tsx (global shell), src/app/page.tsx (redirect to /menu), src/app/menu/page.tsx, src/app/drinks/page.tsx.
+- Frontend: src/app/layout.tsx (providers + metadata), src/components/AppShell.tsx (route-aware shell), src/app/page.tsx (landing homepage), src/app/menu/page.tsx, src/app/drinks/page.tsx.
 - Backend: None (no API routes).
 
 ## Main directories

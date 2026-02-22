@@ -6,6 +6,7 @@ This map answers: "Where is the code for each feature?"
 
 Primary files:
 - `src/app/layout.tsx`
+- `src/components/AppShell.tsx`
 - `src/app/globals.css`
 - `src/components/SiteHeader.tsx`
 Supporting files:
@@ -16,11 +17,14 @@ Supporting files:
 ## 2. Root Routing
 
 Primary files:
-- `src/app/page.tsx` (redirect `/` -> `/menu`)
+- `src/app/page.tsx` (landing homepage)
 - `src/app/menu/page.tsx`
 - `src/app/drinks/page.tsx`
 - `src/app/menu/loading.tsx`
 - `src/app/drinks/loading.tsx`
+Behavior:
+- homepage combines the hero rail with a dedicated editorial "About" mosaic section
+- homepage CTA/navigation remains focused on `/menu` and `/drinks`
 
 ## 3. Menu Data Fetching From CMS
 

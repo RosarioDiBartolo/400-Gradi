@@ -7,6 +7,7 @@ This document covers route files and UI component files.
 Simple/presentational components worth remembering:
 
 - `src/components/LanguageToggle.tsx`: two-button language switch (`it`/`en`) wired to `useLanguage`.
+- `src/components/AppShell.tsx`: route-aware shell that applies header/narrow layout only to `/menu` and `/drinks` routes.
 - `src/components/CategorySection.tsx`: renders one menu category section with optional featured first item.
 - `src/components/PriceBlock.tsx`: price formatter/renderer for base price vs variants.
 - `src/components/dynamic-border.tsx`: motion-based `<hr>` opacity on scroll.
@@ -24,7 +25,7 @@ Purpose: global app shell for all routes.
 Behavior:
 - sets page metadata/title/icons
 - wraps app with `LanguageProvider` and `MenuNavigationProvider`
-- renders `SiteHeader`, route content, and a small static footer disclaimer
+- delegates route-aware shell rendering to `AppShell`
 
 ## `src/app/globals.css`
 
@@ -36,9 +37,12 @@ Behavior:
 
 ## `src/app/page.tsx`
 
-Purpose: root redirect route.  
+Purpose: root landing homepage.  
 Behavior:
-- redirects `/` to `/menu`
+- renders an asymmetric full-bleed hero with warm editorial overlays and identity-first heading
+- includes a right-side vertical action rail (`Menu`, `Drinks`, `La Nostra Filosofia`)
+- adds a large editorial "About" section with image-led mosaic cards (intro, awards, story)
+- keeps primary navigation and CTA focus on `/menu` and `/drinks`
 
 ## `src/app/menu/page.tsx`
 
@@ -75,6 +79,13 @@ Behavior:
 - mounts `ScrollDirectionHeader` in a tall container for manual testing
 
 ## Primary Menu Components
+
+## `src/components/AppShell.tsx`
+
+Purpose: route-aware wrapper for the global layout content area.  
+Behavior:
+- applies sticky `SiteHeader`, constrained content width, and footer only on `/menu` and `/drinks`
+- leaves non-menu routes (including `/`) as full-bleed content
 
 ## `src/components/MenuClient.tsx`
 
